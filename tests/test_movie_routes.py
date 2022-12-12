@@ -1,12 +1,10 @@
 from flask.testing import FlaskClient
 
 from src.models import Movie
-from tests.utils import create_movie, refresh_db
-# comment
+from tests.utils import refresh_db, create_movie
 
 
 def test_get_all_movies(test_app: FlaskClient):
-
     refresh_db()
     test_movie = create_movie()
 
